@@ -1,0 +1,42 @@
+body {
+    background-image: url("../images/gaming.png");
+}
+
+.container {
+    max-width: 960px;
+    width: 100%;
+    height: 600px;
+    margin: auto;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: steelblue;
+    opacity: .8;
+}
+
+header {
+    font-family: 'Emblema One', cursive;
+    font-size: 4rem;
+    text-align: center;
+    color: firebrick;
+    text-shadow: 2px 2px #000;
+    margin-top: 2rem;
+}
+
+#box {
+    display: flex;
+    margin: auto;
+    align-items: center;
+}
+
+button {
+    margin: auto;
+    margin-top: 80px;
+    padding: 30px 60px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: slategrey;
+}
