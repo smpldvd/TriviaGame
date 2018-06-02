@@ -114,7 +114,7 @@ $(document).ready(function () {
         if (timer === 0) {
             stop();
             unansCount++;
-            $('#answerDis').html("Took too long... Should of picked " + stor.cho[stor.cor]);
+            $('#answerDis').html("<p>Took too long... Should of picked " + stor.cho[stor.cor] + "</p>");
             showGif();
         }
     }
@@ -148,8 +148,8 @@ $(document).ready(function () {
                 userPicked = "";
                 $("#answerDis").html("<p>You got THAT right!</p>");
                 showGif();
-                // Function to stop timer when it reaches 0
             }
+            // Function to stop timer when it reaches 0
             else {
                 stop();
                 wrongCount++;
@@ -160,12 +160,13 @@ $(document).ready(function () {
         })
     }
 
-    // Show GIF on answer screen
+    // Show GIF on answer div for 5 seconds
     function showGif() {
         $('#answerDis').append("<img src=" + stor.img + ">");
         newArr.push(stor);
         bank.splice(index, 1);
 
+        // Dumps current question and go to next
         let hidePic = setTimeout( function () {
             $('#answerDis').empty();
             timer = 15;
@@ -189,6 +190,7 @@ $(document).ready(function () {
         }, 5000);
     }
 
+    // At score screen, show reset button to go again
     $("#resetBtn").on("click", function () {
         $("#resetBtn").hide();
         $("#answerDis").empty();
@@ -196,7 +198,7 @@ $(document).ready(function () {
         for (var i = 0; i < qHolder.length; i++) {
             bank.push(qHolder[i]);
         }
-        runTimer();
+        start();
         displayQuest();
 
     })
